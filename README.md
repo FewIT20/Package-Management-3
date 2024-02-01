@@ -6,7 +6,7 @@ Computer Organization and Operating System - Self-study Assignment in part 2
 ## Overview
 Package Managment ระบบจัดการแพ็กเกจ คือ ระบบการจัดการซอฟต์แวร์ที่ช่วยทำให้ติดตั้ง, อัปเดต, และลบซอฟต์แวร์ได้อย่างสะดวกสบาย โดยไม่ต้องไป compile โค้ดเอง มีหลากหลายซอร์ฟแวร์ให้เลือกใช้งานไม่ว่าจะโปรแกรมซอร์ฟเวอร์ เช่น Brave, FileZila หรือ Library ของโปรแกรม เช่น mhwd, mhwd-db เป็นต้น
 
-Repository คือที่เก็บรวบรวมแพกเกจของซอฟต์แวร์ทั้งหมด ในทุกๆ Linux จะมาพร้อมกับตัวจัดการแพกเกจ (Package Manager) เสมอ โดยที่พวก Package Manager นั้นจะทำงานอยู่บนพื้นฐานของ Repository เสมอ เหล่าผู้ใช้ Linux สามารถติ้ดตั้งซอฟต์แวร์ได้อย่างง่าย
+Repository คือที่เก็บรวบรวมแพกเกจของซอฟต์แวร์ทั้งหมด ในทุกๆ Linux จะมาพร้อมกับตัวจัดการแพกเกจ (Package Manager) เสมอ โดยที่พวก Package Manager นั้นจะทำงานอยู่บนพื้นฐานของ Repository เสมอ เหล่าผู้ใช้ Linux สามารถติดตั้งซอฟต์แวร์ได้อย่างง่าย
 
 ## Contributor
 | Student ID | Name | Topic | Profile |
