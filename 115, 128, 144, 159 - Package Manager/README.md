@@ -14,6 +14,13 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dpkg เป็น Debian package manager ที่ติดตั้ง ลบ และกำหนดค่าแพ็คเกจด้วยนามสกุล .deb เพียงดาวน์โหลดเนื้อหาแพ็คเกจ DEB ไปยังระบบและแจ้งให้ทราบเกี่ยวกับการขึ้นต่อกันที่จำเป็น แต่ไม่ได้ติดตั้งหรือกำหนดค่าแพ็คเกจ .deb เนื่องจากขาดการขึ้นต่อกันเนื่องจากไม่สามารถเข้าถึงที่เก็บข้อมูลได้
 
 ข้อเสียที่สำคัญของ dpkg ก็คือ dpkg เป็นโปรแกรมในระดับล่างซึ่งไม่ได้ดูแลในเรื่องของการขึ้นต่อกันของแพคเกจ ผู้ใช้งานจำเป็นต้องติดตั้งแพคเกจที่จำเป็นเอง
+| command | description|
+|---------|------------|
+| --help  | finding out all the options |
+| -i or --install | install package |
+| -r or --remove | remove an installed package |
+| -P or --purge | alternative way to remove an installed package (can be seen as the complete uninstallation) |
+| -L or
 
 ### 2. apt
 
