@@ -11,7 +11,7 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 ## Contributor
 | Student ID | Name | Topic | Profile |
 |--|--|--|--|
-| 65070115 | นางสาวนภสร ศรีวิโรจน์ | Pacakge Manger | |
+| 65070115 | นางสาวนภสร ศรีวิโรจน์ | Pacakge Manger | ![65070115](assets/image/65070115.jpg)|
 | 65070121 | นางสาวนิโลบล  ตรีสุคนธรัตน์ | Respository Setup |  |
 | 65070128 | นางสาวปภาดา รุกขรังษี | Pacakage Manager |  |
 | 65070142 | นายพงศกร นพรัตยาภรณ์ | Respository Setup |  |
