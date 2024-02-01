@@ -19,3 +19,5 @@ Package Managment ระบบจัดการแพ็กเกจ คือ 
 
 ## Source
 * Package Management in Ubuntu - https://ubuntu.com/server/docs/package-management
+* Linux Package Management command cheat sheet - https://www.linuxteck.com/linux-package-management-command-cheat-sheet/
+* Package Management in Linux - https://linuxsimply.com/linux-basics/package-management/
