@@ -1,12 +1,5 @@
-# package management-3
-<b>COOS - Self-study Assignment in part 2
+# Package Management (Group 3)
+Computer Organization and Operating System - Self-study Assignment in part 2
 
-OS Basics and Real Practice
-
-เสนอ :</b>
-
-ผู้ช่วยศาสตราจารย์ ดร. สุเมธ ประภาวัต
-
-อาจารย์ประจำคณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-## overview
-Ubuntu features a comprehensive package management system for installing, upgrading, configuring, and removing software. In addition to providing access to an organized base of over 60,000 software packages for your Ubuntu computer, the package management facilities also feature dependency resolution capabilities and software update checking.
+## Overview
+Package Managment ระบบจัดการแพ็กเพจ คือ ระบบการจัดการซอฟต์แวร์ที่ช่วยทำให้ติดตั้ง, อัปเดต, และลบซอฟต์แวร์ได้อย่างสะดวกสบาย โดยไม่ต้องไป compile โค้ดเอง
