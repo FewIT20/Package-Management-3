@@ -9,7 +9,7 @@
 
 **3.tar.xz :** Arch Linux ใช้รูปแบบแพ็คเกจนี้ และเป็นเพียง tarball ที่ถูกบีบอัด กล่าวอีกนัยหนึ่ง ไฟล์ tar.xz จะถูกคอมไพล์ไฟล์ไบนารี่ที่พร้อมใช้งานของแพ็คเกจซอฟต์แวร์
 ## Debian, Ubuntu Package management tools
-## 1. dpkg
+### 1. dpkg
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dpkg เป็น Debian package manager ที่ติดตั้ง ลบ และกำหนดค่าแพ็คเกจด้วยนามสกุล .deb เพียงดาวน์โหลดเนื้อหาแพ็คเกจ DEB ไปยังระบบและแจ้งให้ทราบเกี่ยวกับการขึ้นต่อกันที่จำเป็น แต่ไม่ได้ติดตั้งหรือกำหนดค่าแพ็คเกจ .deb เนื่องจากขาดการขึ้นต่อกันเนื่องจากไม่สามารถเข้าถึงที่เก็บข้อมูลได้
 
@@ -47,7 +47,7 @@ sudo dpkg -P [package name]
 ```
 sudo dpkg -l
 ```
-## 2. apt
+### 2. apt
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apt คือ Advanced Package Tool ซึ่งจะมีโปรแกรมต่างๆ ที่ช่วยอำนวยความสะดวกในการจัดการแพคเกจ โดยปกติก็คือ โปรแกรมที่ขึ้นต้นด้วย apt- ทั้งหลาย เช่น apt-get, apt-cache
 
@@ -108,7 +108,8 @@ sudo apt search [package name]
 ```
 sudo apt list --installed
 ```
-## 3. pacman 
+## Arch Linux package management tool
+## Pacman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pacman คือตัวจัดการแพ็กเกจสำหรับ Arch Linux และระบบปฏิบัติการ Linux ที่ใช้ Arch เป็นฐาน สามารถใช้ไฟล์บีบอัดเป็นรูปแบบแพ็กเกจและเก็บรักษาฐานข้อมูลแพ็กเกจในรูปแบบข้อความ Pacman ช่วยให้ระบบอัปเดตอยู่เสมอโดยการ Synchronize รายการแพ็กเกจกับเซิร์ฟเวอร์หลัก Pacman สามารถติดตั้งแพ็กเกจจากฐานข้อมูลอย่างเป็นทางการหรือแพ็กเกจที่สร้างขึ้นเองได้
 
 #### การติดตั้ง Package โดยใช้ Pacman
