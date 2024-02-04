@@ -24,6 +24,7 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 * Linux Package Management command cheat sheet - https://www.linuxteck.com/linux-package-management-command-cheat-sheet/
 * Package Management in Linux - https://linuxsimply.com/linux-basics/package-management/
 * Repository Configuration in Linux - https://linuxsimply.com/linux-basics/package-management/repository-configuration/
+* Apt linux command with examples - https://www.tutorialspoint.com/apt-linux-command-with-examples
 * Restore Default Debian and Ubuntu Repositories - https://www.baeldung.com/linux/default-repositories-debian-ubuntu
 * Initial push to a remote Git repository - https://stackoverflow.com/questions/2337281/how-do-i-do-an-initial-push-to-a-remote-repository-with-git
 * Add-apt-repository - https://linuxize.com/post/how-to-add-apt-repository-in-ubuntu/
