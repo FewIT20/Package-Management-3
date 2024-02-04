@@ -25,7 +25,8 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 * Package Management in Linux - https://linuxsimply.com/linux-basics/package-management/
 * Repository Configuration in Linux - https://linuxsimply.com/linux-basics/package-management/repository-configuration/
 * Restore Default Debian and Ubuntu Repositories - https://www.baeldung.com/linux/default-repositories-debian-ubuntu
-* initial push to a remote Git repository - https://stackoverflow.com/questions/2337281/how-do-i-do-an-initial-push-to-a-remote-repository-with-git
-* add-apt-repository - https://linuxize.com/post/how-to-add-apt-repository-in-ubuntu/
-* source for learning about managing YUM repositories - https://access.redhat.com/documentation/th-th/red_hat_enterprise_linux/6/html/deployment_guide/sec-managing_yum_repositories
-* source for information related to using Nginx within Docker containers - https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
+* Initial push to a remote Git repository - https://stackoverflow.com/questions/2337281/how-do-i-do-an-initial-push-to-a-remote-repository-with-git
+* Add-apt-repository - https://linuxize.com/post/how-to-add-apt-repository-in-ubuntu/
+* Source for learning about managing YUM repositories - https://access.redhat.com/documentation/th-th/red_hat_enterprise_linux/6/html/deployment_guide/sec-managing_yum_repositories
+* Source for information related to using Nginx within Docker containers - https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
+* Pacman command in Arch Linux - https://www.geeksforgeeks.org/pacman-command-in-arch-linux/
