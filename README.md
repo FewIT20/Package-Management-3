@@ -31,3 +31,7 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 * Package Management in Linux - https://linuxsimply.com/linux-basics/package-management/
 * Repository Configuration in Linux - https://linuxsimply.com/linux-basics/package-management/repository-configuration/
 * Restore Default Debian and Ubuntu Repositories - https://www.baeldung.com/linux/default-repositories-debian-ubuntu
+* https://stackoverflow.com/questions/2337281/how-do-i-do-an-initial-push-to-a-remote-repository-with-git
+* https://linuxize.com/post/how-to-add-apt-repository-in-ubuntu/
+* https://access.redhat.com/documentation/th-th/red_hat_enterprise_linux/6/html/deployment_guide/sec-managing_yum_repositories
+* https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
