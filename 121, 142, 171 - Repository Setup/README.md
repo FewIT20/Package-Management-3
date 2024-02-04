@@ -31,43 +31,43 @@ option2: value2
 ## How to bring your own repository?
 การสร้างหรือเพิ่ม repository เข้าไปในระบบปฏิบัติการ Linux ขึ้นอยู่กับการจัดการแพคเกจ (package management) ที่ระบบปฏิบัติการนั้น ๆ ใช้ ดังนั้นจึงมีหลายวิธี
 ### 1. การสร้าง Local Git Repository:
-สร้าง Local Repository:
+คำสั่ง git init จะสร้าง Git repository ในไดเรกทอรีปัจจุบันและเริ่มต้นการติดตามการเปลี่ยนแปลง:
 ```
 mkdir my_project
 cd my_project
 git init
 ```
-เพิ่มไฟล์และ Commit:
+การใช้ git add เพื่อเพิ่มไฟล์ในสถานะ "Staged" และ git commit เพื่อบันทึกการเปลี่ยนแปลงที่ถูก Staged:
 ```
 touch README.md
 git add README.md
 git commit -m "Initial commit"
 ```
 ### 2. การใช้ APT (Advanced Package Tool) ใน Ubuntu/Debian:
-เพิ่ม Repository:
+คำสั่งนี้ใช้เพื่อเพิ่มแหล่งที่มาของแพคเกจในไฟล์การกำหนดค่าของ APT:
 ```
 sudo add-apt-repository <repository_URL>
 ```
-อัปเดตรายการแพคเกจ:
+คำสั่งนี้ใช้เพื่ออัปเดตรายการแพคเกจที่มีในระบบ:
 ```
 sudo apt update
 ```
 ### 3. การใช้ YUM (Yellowdog Updater, Modified) ใน CentOS/Fedora:
-เพิ่ม Repository:
+คำสั่งนี้ใช้เพื่อเพิ่ม repository ใน YUM configuration:
 ```
 sudo yum-config-manager --add-repo=<repository_URL>
 ```
-อัปเดตรายการแพคเกจ:
+คำสั่งนี้ใช้เพื่ออัปเดตรายการแพคเกจในระบบ:
 ```
 sudo yum update
 ```
 ### 4. การใช้ Docker เพื่อสร้าง Containerized Repository:
-สร้าง Dockerfile:
+Dockerfile นี้ใช้ Nginx เป็น Base Image และคัดลอกไฟล์จาก Directory ปัจจุบันไปยัง /usr/share/nginx/html ใน Container:
 ```
 FROM nginx:latest
 COPY . /usr/share/nginx/html
 ```
-Build และรัน Docker Container:
+คำสั่ง docker build ใช้สร้าง Docker Image จาก Dockerfile และ docker run ใช้เริ่มต้น Container จาก Image ที่สร้างขึ้น:
 ```
 docker build -t my-repo .
 docker run -p 8080:80 my-repo
