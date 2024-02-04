@@ -19,20 +19,34 @@
 |`` --help `` | finding out all the options |
 | ``-i or --install`` | install package |
 | ``-r or --remove`` | remove an installed package |
+| ``--update-avail`` | update all packages to latest version |
 | ``-P or --purge`` | alternative way to remove an installed package (can be seen as the complete uninstallation) |
-| ``-L`` | list all the files that were installed by a package |
-### 1.1 installing a package
+| ``-l`` | list all the files that were installed by a package |
+#### installing a package
 คำสั่ง dpkg ขั้นพื้นฐานที่สุดใน Ubuntu คือการติดตั้งแพ็คเกจ เราสามารถติดตั้งแพ็คเกจ deb ใน Ubuntu หรือ Debian ได้โดยใช้คำสั่ง
-
-``
-sudo dpkg -i [package name]
-``
-### 1.2 removing a package
+```
+sudo dpkg -i [package name].deb
+```
+#### removing a package
 เมื่อไม่ต้องการโปรแกรมหรือบริการบนระบบ ก็ไม่มีประโยชน์ที่จะเก็บไว้ เราสามารถถอนการติดตั้งโปรแกรมหรือบริการออกจากระบบของเราได้โดยใช้คำสั่ง
-
-``
+```
 sudo dpkg -r [package name]
-``
+```
+#### update repositories
+พื้นที่เก็บข้อมูล dpkg จะจัดเก็บแพ็คเกจทั้งหมดที่พร้อมใช้งานสำหรับการติดตั้งบน Ubuntu หรือ Debian Linux แต่เนื่องจากแพ็คเกจเหล่านี้ถูกจัดเก็บไว้ในเครื่อง ทำให้แพ็คเกจเวอร์ชันที่มีอยู่เก่าสำหรับโปรแกรมเมื่อมีการออกเวอร์ชันใหม่แล้ว ซึ่งทำให้จำเป็นต้องมีวิธีการอัพเดตที่เก็บข้อมูลโดยใช้คำสั่ง
+```
+sudo dpkg --update-avail
+```
+#### purging a package
+หากต้องการลบแพ็คเกจและไฟล์การกำหนดค่าโดยใช้ dpkg ให้ใช้ตัวเลือก -P ตามด้วยชื่อแพ็คเกจ ตามคำสั่ง
+```
+sudo dpkg -P [package name]
+```
+#### list installed packages
+หากต้องการแสดงรายการแพ็คเกจที่ติดตั้งทั้งหมดโดยใช้ dpkg ให้ใช้ตัวเลือก -l ตัวอย่างเช่น หากต้องการแสดงรายการแพ็คเกจที่ติดตั้งทั้งหมด คุณจะต้องใช้คำสั่ง
+```
+sudo dpkg -l
+```
 ## 2. apt
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;apt คือ Advanced Package Tool ซึ่งจะมีโปรแกรมต่างๆ ที่ช่วยอำนวยความสะดวกในการจัดการแพคเกจ โดยปกติก็คือ โปรแกรมที่ขึ้นต้นด้วย apt- ทั้งหลาย เช่น apt-get, apt-cache
@@ -48,10 +62,53 @@ apt-get ไม่สามารถจัดการไฟล์ .deb โดย
 | ``purge [package name]`` | remove package along with its configuration files |
 | ``clean`` | clean up the local repository |
 | ``search`` | search for package |
-| ``show``| display detailed information about a package |
-
-
-### 3. pacman 
+| ``list --installed``| list all packages that have been installed |
+#### updating package lists
+ก่อนที่จะติดตั้งแพ็คเกจใดๆ บนระบบ Linux สิ่งสำคัญคือต้องอัพเดตรายการแพ็คเกจ Apt ใช้รายการแพ็กเกจเพื่อทราบว่ามีแพ็คเกจใดบ้างสำหรับการติดตั้ง โดยใช้คำสั่ง
+```
+sudo apt update
+```
+#### upgrading packages
+หากต้องการอัพเกรดแพ็คเกจที่ติดตั้งบนระบบ Linux คำสั่งนี้จะดาวน์โหลดและติดตั้งแพ็คเกจเวอร์ชันล่าสุดที่ติดตั้งไว้แล้วบนระบบ โดยใช้คำสั่ง
+```
+sudo apt upgrade
+```
+#### installing packages
+ในการติดตั้งแพ็คเกจต้องใช้คำสั่ง apt install ตามด้วยชื่อแพ็คเกจที่ต้องการติดตั้ง โดย
+```
+sudo apt install [package name]
+```
+#### removing packages
+หากคุณต้องการลบแพ็คเกจออกจากระบบ Linux ใช้คำสั่ง
+```
+sudo apt remove [package name]
+```
+#### autoremove packages
+บางครั้ง เมื่อลบแพ็คเกจออกจากระบบ Linux อาจจะทิ้งการขึ้นต่อกันบางอย่างไว้ และไม่จำเป็นอีกต่อไป สามารถลบออกได้โดยใช้คำสั่ง apt autoremove หากต้องการลบการพึ่งพาที่ไม่จำเป็นออกให้ใช้คำสั่ง
+```
+sudo apt autoremove
+```
+#### purging packages
+หากต้องการลบแพ็คเกจออกจากระบบ ของอย่างสมบูรณ์ รวมถึง configuration file ให้ใช้คำสั่ง apt purge ตามด้วยชื่อแพ็คเกจ
+```
+sudo apt purge [package name]
+```
+#### cleaning up
+เมื่อติดตั้งหรือลบแพ็คเกจบนระบบ, apt จะเก็บไฟล์แพ็คเกจที่ดาวน์โหลดไว้ในแคช ซึ่งอาจใช้พื้นที่ดิสก์ได้มากเมื่อเวลาผ่านไป หากต้องการล้างแคชให้ใช้คำสั่ง apt clean คำสั่งนี้จะลบไฟล์แพ็คเกจที่ดาวน์โหลดทั้งหมดออกจากแคช
+```
+sudo apt clean
+```
+#### searching for packages
+หากต้องการค้นหาแพ็คเกจ ให้ใช้คำสั่ง apt search ตามด้วยชื่อแพ็คเกจที่ต้องการค้นหา คำสั่งนี้จะค้นหาที่เก็บแพ็กเกจและแสดงผลลัพธ์
+```
+sudo apt search [package name]
+```
+#### listing installed packages
+หากต้องการแสดงรายการแพ็คเกจทั้งหมดที่ติดตั้งบนระบบ ให้ใช้คำสั่ง apt list คำสั่งนี้จะแสดงรายการแพ็คเกจที่ติดตั้งทั้งหมดพร้อมกับหมายเลขเวอร์ชัน
+```
+sudo apt list --installed
+```
+## 3. pacman 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pacman คือตัวจัดการแพ็กเกจสำหรับ Arch Linux และระบบปฏิบัติการ Linux ที่ใช้ Arch เป็นฐาน สามารถใช้ไฟล์บีบอัดเป็นรูปแบบแพ็กเกจและเก็บรักษาฐานข้อมูลแพ็กเกจในรูปแบบข้อความ Pacman ช่วยให้ระบบอัปเดตอยู่เสมอโดยการ Synchronize รายการแพ็กเกจกับเซิร์ฟเวอร์หลัก Pacman สามารถติดตั้งแพ็กเกจจากฐานข้อมูลอย่างเป็นทางการหรือแพ็กเกจที่สร้างขึ้นเองได้
 
 #### การติดตั้ง Package โดยใช้ Pacman
