@@ -31,3 +31,4 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 * Source for learning about managing YUM repositories - https://access.redhat.com/documentation/th-th/red_hat_enterprise_linux/6/html/deployment_guide/sec-managing_yum_repositories
 * Source for information related to using Nginx within Docker containers - https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
 * Pacman command in Arch Linux - https://www.geeksforgeeks.org/pacman-command-in-arch-linux/
+* RPM Command in Linux - https://www.geeksforgeeks.org/how-to-use-the-rpm-command-in-linux/
