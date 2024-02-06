@@ -15,7 +15,7 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 | 65070121 | นางสาวนิโลบล  ตรีสุคนธรัตน์ | Respository Setup |  |
 | 65070128 | นางสาวปภาดา รุกขรังษี | Pacakage Manager |  |
 | 65070142 | นายพงศกร นพรัตยาภรณ์ | Respository Setup |  |
-| 65070144 | นางสาวพรพัฒน์ ธนทัตธาดา | Package Manager | ![65070144](assets/image/65070159.jpg)  |
+| 65070144 | นางสาวพรพัฒน์ ธนทัตธาดา | Package Manager | ![65070144](assets/image/65070144.jpg)  |
 | 65070159 | นายพีรณัฐ หมัดสอ | Package Manager | ![65070159](assets/image/65070159.jpg)  |
 | 65070171 | นายภัทร์สรรพ์พร นครานุรักษ์ | Respository Setup |  |
 
