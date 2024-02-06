@@ -11,13 +11,13 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 ## Contributor
 | Student ID | Name | Topic | Profile |
 |--|--|--|--|
-| 65070115 | นางสาวนภสร ศรีวิโรจน์ | Pacakge Manger | ![65070115](assets/image/65070115.jpg)|
-| 65070121 | นางสาวนิโลบล  ตรีสุคนธรัตน์ | Respository Setup | ![65070121](assets/image/65070121.JPG) |
-| 65070128 | นางสาวปภาดา รุกขรังษี | Pacakage Manager | ![65070128](assets/image/65070128.JPG) |
-| 65070142 | นายพงศกร นพรัตยาภรณ์ | Respository Setup | ![65070142](assets/image/65070142.JPG) |
-| 65070144 | นางสาวพรพัฒน์ ธนทัตธาดา | Package Manager | ![65070144](assets/image/65070144.jpg)  |
-| 65070159 | นายพีรณัฐ หมัดสอ | Package Manager | ![65070159](assets/image/65070159.jpg)  |
-| 65070171 | นายภัทร์สรรพ์พร นครานุรักษ์ | Respository Setup | ![65070171](assets/image/65070171.JPG) |
+| 65070115 | นางสาวนภสร ศรีวิโรจน์ | Pacakge Manger | <img src="assets/image/65070115.jpg" width="250">|
+| 65070121 | นางสาวนิโลบล ตรีสุคนธรัตน์ | Respository Setup | <img src="assets/image/65070121.JPG" width="250"> |
+| 65070128 | นางสาวปภาดา รุกขรังษี | Pacakage Manager | <img src="assets/image/65070128.JPG" width="250"> |
+| 65070142 | นายพงศกร นพรัตยาภรณ์ | Respository Setup | <img src="assets/image/65070142.JPG" width="250"> |
+| 65070144 | นางสาวพรพัฒน์ ธนทัตธาดา | Package Manager | <img src="assets/image/65070144.jpg" width="250"> |
+| 65070159 | นายพีรณัฐ หมัดสอ | Package Manager | <img src="assets/image/65070159.jpg" width="250"> |
+| 65070171 | นายภัทร์สรรพ์พร นครานุรักษ์ | Respository Setup | <img src="assets/image/65070171.JPG" width="250"> |
 
 ## Source
 * Package Management in Ubuntu - https://ubuntu.com/server/docs/package-management
