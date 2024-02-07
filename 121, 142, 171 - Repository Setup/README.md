@@ -28,8 +28,6 @@ option1: value1
 option2: value2
 ```
 
-## How to create repository
-
 ## How to bring your own repository?
 การสร้างหรือเพิ่ม repository เข้าไปในระบบปฏิบัติการ Linux ขึ้นอยู่กับการจัดการแพคเกจ (package management) ที่ระบบปฏิบัติการนั้น ๆ ใช้ ดังนั้นจึงมีหลายวิธี
 ### 1. การสร้าง Local Git Repository:
