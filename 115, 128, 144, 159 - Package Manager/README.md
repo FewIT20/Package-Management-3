@@ -127,6 +127,17 @@ sudo rpm -e package_name
 ปัญหาที่อาจเกิดขึ้น:
 * Package ที่ไม่พบ: Package ที่ต้องการลบอาจไม่พบ
 * Package ที่มีการพึ่งพา: Package ที่ต้องการลบอาจมี Package อื่น ๆ ที่พึ่งพา
+#### การอัพเดท Software โดยใช้ RPM
+```bash
+sudo rpm -U package-new-version.rpm
+```
+ปัญหาที่อาจเกิดขึ้น:
+* การพึ่งพาที่ไม่ตรงกัน: เวอร์ชันใหม่ของซอฟต์แวร์อาจต้องการ Package อื่น ๆ ที่ยังไม่ได้ติดตั้ง
+* ความขัดแย้งกับ Package อื่น: เวอร์ชันใหม่ของซอฟต์แวร์อาจมีไฟล์ที่ขัดแย้งกับ Package อื่นที่ติดตั้งอยู่
+#### การค้นหาข้อมูลเกี่ยวกับ Software โดยใช้ RPM
+```bash
+rpm -q package.rpm
+```
 ## YUM
 
 ## Arch Linux package management tool
