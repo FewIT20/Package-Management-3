@@ -109,38 +109,79 @@ sudo apt search [package name]
 sudo apt list --installed
 ```
 ## RPM package management tool
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPM(Red Hat Package Manager) คือโปรแกรมโอเพนซอร์สสำหรับระบบที่ใช้ในการติดตั้ง, ถอนการติดตั้ง, อัปเดต, และจัดการซอฟต์แวร์บนระบบปฏิบัติการ Linux ระบบ RPM ถูกพัฒนาขึ้นบนพื้นฐานของ Linux Standard Base (LSB)
-#### เครื่องมือ RPM: โปรแกรมสำหรับจัดการไฟล์ RPM เช่น
-* rpm: คำสั่งหลักสำหรับติดตั้ง ถอนการติดตั้ง อัปเดต และค้นหาข้อมูลเกี่ยวกับไฟล์ RPM
-* yum: เครื่องมือสำหรับจัดการคลังซอฟต์แวร์ ติดตั้ง และอัปเดตซอฟต์แวร์
-* dnf: เครื่องมือที่ทันสมัยกว่า yum สำหรับจัดการคลังซอฟต์แวร์ ติดตั้ง และอัปเดตซอฟต์แวร์
-#### การติดตั้ง Package โดยใช้ RPM
-ดาวน์โหลด Package
-* ค้นหา Package ที่ต้องการติดตั้งจากแหล่งที่เชื่อถือได้ เช่น เว็บไซต์ของผู้พัฒนาซอฟต์แวร์ หรือคลังซอฟต์แวร์ของ distribution ที่ใช้
-* ดาวน์โหลดไฟล์ Package ที่มีนามสกุล .rpm
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPM (Red Hat Package Manager) เป็นเครื่องมือพื้นฐานของการจัดการแพ็คเกจของ Linux. RPM ถูกใช้กันอย่างแพร่หลายในการกระจายของระบบที่ใช้เป็นพื้นฐานของ Red Hat เช่น Fedora และ CentOS รวมถึงการกระจายอื่นที่ใช้ระบบ RPM. คำสั่ง `rpm` ช่วยให้ผู้ใช้สามารถติดตั้ง, ค้นหา, ตรวจสอบ และจัดการแพ็คเกจซอฟต์แวร์ได้ ซึ่งเป็นเครื่องมือที่สำคัญสำหรับผู้ดูแลระบบและคือผู้ที่มีความสนใจในระบบปฏิบัติการ Linux
+
+### RPM คืออะไร?
+RPM เป็นระบบจัดการแพ็คเกจซอฟต์แวร์สำหรับการติดตั้ง, อัปเดต, และลบแพ็คเกจซอฟต์แวร์บนระบบปฏิบัติการ Linux. Red Hat เป็นผู้พัฒนาแรก แต่ได้รับการนำไปใช้โดยการกระจาย Linux อื่น ๆ ไปยังหลายระบบ. แพ็คเกจ RPM ซึ่งมักจะมีนามสกุลไฟล์ `.rpm` ประกอบด้วยไฟล์ที่จำเป็นทั้งหมด, ข้อมูลเมตาดาต้า, และสคริปต์ที่ต้องการในการติดตั้งและจัดการซอฟต์แวร์บนระบบ Linux
+
+#### Syntax พื้นฐานของ RPM ใน Linux
 ```bash
-sudo rpm -i package.rpm
+rpm [options] [package_name]
 ```
-ปัญหาที่อาจเกิดขึ้น
-* การพึ่งพาที่ไม่ตรงกัน: Package ที่ต้องการติดตั้งอาจต้องการ Package อื่น ๆ ที่ยังไม่ได้ติดตั้ง
-* ความขัดแย้งกับ Package อื่น: Package ที่ต้องการติดตั้งอาจมีไฟล์ที่ขัดแย้งกับ Package อื่นที่ติดตั้งอยู่
-#### การลบ Package โดยใช้ RPM
+
+**[options]** แทน ตัวเลือกทางคำสั่งต่าง ๆ ที่ควบคุมพฤติกรรมของคำสั่ง `rpm`
+**[package_name]** กล่าวถึงชื่อของแพ็คเกจ RPM ที่ผู้ใช้ต้องการทำงานด้วย
+
+### Options ที่สามารถใช้งานได้ในคำสั่ง `rpm` ในระบบปฏิบัติการ Linux
+การใช้ตัวเลือกเหล่านี้จะให้ผู้ใช้ได้รับฟังก์ชันและการควบคุมที่หลากหลายเมื่อทำงานกับแพ็คเกจ RPM บนระบบ Linux ผู้ใช้สามารถใช้งานเพื่อติดตั้ง, อัปเกรด, ค้นหา และจัดการแพ็คเกจได้อย่างมีประสิทธิภาพ
+| options | description|
+|---------|------------|
+| ``-i, –install``  | Install an RPM package. |
+| ``-U, –upgrade`` | Upgrade an RPM package. |
+| ``-q, –query`` | Query RPM package(s) or display information about installed packages. |
+| ``-a, –all`` | Used with -q, lists all installed packages. |
+| ``-V, –verify`` | Verify the integrity of installed packages. |
+| ``-e, –erase`` | Uninstall or erase an RPM package |
+| ``-F, –freshen`` | Upgrade packages but only if a package with the same name is already installed. |
+| ``–nodes`` | Ignore package dependencies during installation or removal. |
+| ``–test``| Test mode; shows what the rpm command would do without making any changes. |
+| ``-h, –hash``  | Display hash marks (#) to indicate progress during installation or removal. |
+| ``–force``  | Force installation, even if it overwrites files from other packages or has other issues. |
+| ``–reinstall``  | Reinstall an RPM package. |
+| ``–import``  | Import a GPG key for package signature verification. |
+| ``–resign``  | Resign an RPM package with a new GPG key. |
+| ``-F, –file``  | Used with -q, queries which package owns a particular file. |
+| ``–package``  | Used with -q, queries information about an RPM file or package. |
+| ``–setperms``  | Set permissions of package files to their default values. |
+| ``–setugids``  | Set user and group ownership of package files to their defaults. |
+| ``–nodigest``  | Skip digest checks when installing or upgrading packages. |
+| ``–rebuilddb``  | Rebuild the RPM database. |
+| ``–testsig``  | Test the digital signature of an RPM package. |
+| ``–showrc``  | Show RPM configuration settings. |
+| ``-h, –help``  | Display help information. |
+| ``–version``  | Display the RPM version. |
+
+### คำสั่ง RPM เบื้องต้นบน Linux
+คำสั่งที่กำลังจะกล่าวถึงด้านล่างนี้ ช่วยในการจัดการแพ็กเกจบนระบบ Linux โดยใช้ RPM (Red Hat Package Manager) เป็นรูปแบบของแพ็กเกจ
+#### 1. คำสั่งสำหรับการติดตั้งแพ็กเกจ RPM
+เพื่อติดตั้งแพ็คเกจ RPM คุณสามารถใช้คำสั่ง `rpm` ตามด้วยคำสั่ง `-i` (หรือ `--install`) และชื่อของแพ็คเกจ RPM ไฟล์ได้ :
 ```bash
-sudo rpm -e package_name
+rpm -i package.rpm
 ```
-ปัญหาที่อาจเกิดขึ้น
-* Package ที่ไม่พบ: Package ที่ต้องการลบอาจไม่พบ
-* Package ที่มีการพึ่งพา: Package ที่ต้องการลบอาจมี Package อื่น ๆ ที่พึ่งพา
-#### การอัพเดท Software โดยใช้ RPM
+#### 2. คำสั่งสำหรับการอัปเดตแพ็กเกจ RPM
+เพื่ออัปเกรดแพ็คเกจที่ติดตั้งไว้เป็นเวอร์ชันใหม่ ใช้ตัวเลือก `-U` (หรือ `--upgrade`) :
 ```bash
-sudo rpm -U package-new-version.rpm
+rpm -U package.rpm
 ```
-ปัญหาที่อาจเกิดขึ้น
-* การพึ่งพาที่ไม่ตรงกัน: เวอร์ชันใหม่ของซอฟต์แวร์อาจต้องการ Package อื่น ๆ ที่ยังไม่ได้ติดตั้ง
-* ความขัดแย้งกับ Package อื่น: เวอร์ชันใหม่ของซอฟต์แวร์อาจมีไฟล์ที่ขัดแย้งกับ Package อื่นที่ติดตั้งอยู่
-#### การค้นหาข้อมูลเกี่ยวกับ Software โดยใช้ RPM
+#### 3. คำสั่งแสดงรายการแพ็คเกจทั้งหมดที่ถูกติดตั้งใน RPM
+เพื่อแสดงรายการแพ็คเกจทั้งหมดที่ถูกติดตั้งในระบบ ใช้ตัวเลือก `-q` (หรือ `--query`) พร้อมกับ -a (หรือ --all) :
 ```bash
-rpm -q package.rpm
+rpm -qa
+```
+#### 4. คำสั่งสำหรับการค้นหาแพ็กเกจ RPM
+เพื่อดึงข้อมูลรายละเอียดเกี่ยวกับแพ็คเกจที่ระบุ ให้ใช้ตัวเลือก `-q` (หรือ `–query`) ตามด้วยชื่อแพ็คเกจ :
+```bash
+rpm -q package_name
+```
+#### 5. คำสั่งสำหรับตรวจสอบแพ็กเกจ RPM
+สามารถตรวจสอบความสมบูรณ์และความถูกต้องของแพ็กเกจ RPM โดยไม่ต้องติดตั้งด้วยการใช้ตัวเลือก `-V` (หรือ `--verify`) นี้ เพื่อตรวจสอบว่าไฟล์ในแพ็กเกจได้ถูกแก้ไขหรือลบไปหรือไม่ :
+```bash
+rpm -V package_name
+```
+#### 6. คำสั่งสำหรับถอนการติดตั้งแพ็กเกจ RPM
+เพื่อลบแพ็กเกจที่ติดตั้งไว้ ใช้ตัวเลือก `-e` (หรือ `–erase`) ตามด้วยชื่อแพ็กเกจ :
+```bash
+rpm -e package_name
 ```
 ## YUM
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YUM(Yellowdog Updater, Modified) คือ เครื่องมือจัดการ Package บนระบบปฏิบัติการ Linux ที่ใช้ RPM (Red Hat Package Manager) เป็นพื้นฐาน
