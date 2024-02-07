@@ -32,3 +32,5 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 * Source for information related to using Nginx within Docker containers - https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
 * Pacman command in Arch Linux - https://www.geeksforgeeks.org/pacman-command-in-arch-linux/
 * RPM Command in Linux - https://www.geeksforgeeks.org/how-to-use-the-rpm-command-in-linux/
+* Linux package management with YUM and RPM - https://www.redhat.com/sysadmin/how-manage-packages
+* Linux package management with RPM - https://www.techtarget.com/searchdatacenter/definition/RPM-Package-Manager-Red-hat-Package-Manager#:~:text=RPM%20Package%20Manager%20(also%20known,Linux%20Standard%20Base%20(LSB).
