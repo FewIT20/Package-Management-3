@@ -109,7 +109,7 @@ sudo apt search [package name]
 sudo apt list --installed
 ```
 ## RPM package management tool
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPM คือโปรแกรมโอเพนซอร์สสำหรับระบบที่ใช้ในการติดตั้ง, ถอนการติดตั้ง, อัปเดต, และจัดการซอฟต์แวร์บนระบบปฏิบัติการ Linux ระบบ RPM ถูกพัฒนาขึ้นบนพื้นฐานของ Linux Standard Base (LSB)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPM(Red Hat Package Manager) คือโปรแกรมโอเพนซอร์สสำหรับระบบที่ใช้ในการติดตั้ง, ถอนการติดตั้ง, อัปเดต, และจัดการซอฟต์แวร์บนระบบปฏิบัติการ Linux ระบบ RPM ถูกพัฒนาขึ้นบนพื้นฐานของ Linux Standard Base (LSB)
 #### เครื่องมือ RPM: โปรแกรมสำหรับจัดการไฟล์ RPM เช่น
 * rpm: คำสั่งหลักสำหรับติดตั้ง ถอนการติดตั้ง อัปเดต และค้นหาข้อมูลเกี่ยวกับไฟล์ RPM
 * yum: เครื่องมือสำหรับจัดการคลังซอฟต์แวร์ ติดตั้ง และอัปเดตซอฟต์แวร์
