@@ -34,3 +34,5 @@ Repository คือที่เก็บรวบรวมแพกเกจข
 * RPM Command in Linux - https://www.geeksforgeeks.org/how-to-use-the-rpm-command-in-linux/
 * Linux package management with YUM and RPM - https://www.redhat.com/sysadmin/how-manage-packages
 * Linux package management with RPM - https://www.techtarget.com/searchdatacenter/definition/RPM-Package-Manager-Red-hat-Package-Manager#:~:text=RPM%20Package%20Manager%20(also%20known,Linux%20Standard%20Base%20(LSB).
+* What Is YUM - https://blog.packagecloud.io/what-is-yum-package-manager/
+* dnf Linux Command - https://ioflood.com/blog/dnf-linux-command/
