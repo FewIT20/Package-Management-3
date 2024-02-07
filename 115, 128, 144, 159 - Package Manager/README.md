@@ -109,6 +109,24 @@ sudo apt search [package name]
 sudo apt list --installed
 ```
 ## RPM package management tool
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPM คือโปรแกรมโอเพนซอร์สสำหรับระบบที่ใช้ในการติดตั้ง, ถอนการติดตั้ง, อัปเดต, และจัดการซอฟต์แวร์บนระบบปฏิบัติการ Linux ระบบ RPM ถูกพัฒนาขึ้นบนพื้นฐานของ Linux Standard Base (LSB)
+#### การติดตั้ง Package โดยใช้ RPM
+ดาวน์โหลด Package:
+* ค้นหา Package ที่ต้องการติดตั้งจากแหล่งที่เชื่อถือได้ เช่น เว็บไซต์ของผู้พัฒนาซอฟต์แวร์ หรือคลังซอฟต์แวร์ของ distribution ที่ใช้
+* ดาวน์โหลดไฟล์ Package ที่มีนามสกุล .rpm
+```bash
+sudo rpm -i package.rpm
+```
+ปัญหาที่อาจเกิดขึ้น:
+* การพึ่งพาที่ไม่ตรงกัน: Package ที่ต้องการติดตั้งอาจต้องการ Package อื่น ๆ ที่ยังไม่ได้ติดตั้ง
+* ความขัดแย้งกับ Package อื่น: Package ที่ต้องการติดตั้งอาจมีไฟล์ที่ขัดแย้งกับ Package อื่นที่ติดตั้งอยู่
+#### การลบ Package โดยใช้ RPM
+```bash
+sudo rpm -e package_name
+```
+ปัญหาที่อาจเกิดขึ้น:
+* Package ที่ไม่พบ: Package ที่ต้องการลบอาจไม่พบ
+* Package ที่มีการพึ่งพา: Package ที่ต้องการลบอาจมี Package อื่น ๆ ที่พึ่งพา
 ## YUM
 
 ## Arch Linux package management tool
