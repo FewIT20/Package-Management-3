@@ -143,7 +143,39 @@ sudo rpm -U package-new-version.rpm
 rpm -q package.rpm
 ```
 ## YUM
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; YUM(Yellowdog Updater, Modified) คือ เครื่องมือจัดการ Package บนระบบปฏิบัติการ Linux ที่ใช้ RPM (Red Hat Package Manager) เป็นพื้นฐาน
+#### การติดตั้ง Package "vim"
+* YUM ช่วยให้ติดตั้ง Package จากคลังซอฟต์แวร์ได้ง่าย เพียงใช้คำสั่ง yum install package_name
+```bash
+yum install vim
+```
+#### การอัปเดต Package ทั้งหมด
+* YUM ช่วยให้อัปเดต Package ทั้งหมดบนระบบ หรือ Package เฉพาะบางตัว โดยอัตโนมั
+```bash
+yum update
+```
+#### การถอนการติดตั้ง Package "vim"
+*  YUM ช่วยให้ถอนการติดตั้ง Package ที่ไม่ต้องการออกจากระบบ
+```bash
+yum remove vim
+```
+## DNF
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DNF(Dandified Yum) คือเครื่องมือจัดการ Package บนระบบปฏิบัติการ Linux ที่ใช้ RPM (Red Hat Package Manager) เป็นพื้นฐาน คล้ายกับ YUM แต่ DNF นั้นใหม่กว่า เร็วกว่า และมีฟังก์ชั่นเพิ่มเติม
+#### การติดตั้ง Package "vim"
+* DNF ช่วยให้ติดตั้ง Package จากคลังซอฟต์แวร์ได้ง่าย เพียงใช้คำสั่ง dnf install package_name
+```bash
+dnf install vim
+```
+#### การอัปเดต Package ทั้งหมด
+* DNF ช่วยให้อัปเดต Package ทั้งหมดบนระบบ หรือ Package เฉพาะบางตัว โดยอัตโนมัติ
+```bash
+dnf update
+```
+#### การถอนการติดตั้ง Package "vim"
+*   DNF ช่วยให้ถอนการติดตั้ง Package ที่ไม่ต้องการออกจากระบบ
+```bash
+dnf remove vim
+```
 ## Arch Linux package management tool
 ## Pacman
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pacman คือตัวจัดการแพ็กเกจสำหรับ Arch Linux และระบบปฏิบัติการ Linux ที่ใช้ Arch เป็นฐาน สามารถใช้ไฟล์บีบอัดเป็นรูปแบบแพ็กเกจและเก็บรักษาฐานข้อมูลแพ็กเกจในรูปแบบข้อความ Pacman ช่วยให้ระบบอัปเดตอยู่เสมอโดยการ Synchronize รายการแพ็กเกจกับเซิร์ฟเวอร์หลัก Pacman สามารถติดตั้งแพ็กเกจจากฐานข้อมูลอย่างเป็นทางการหรือแพ็กเกจที่สร้างขึ้นเองได้
